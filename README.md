@@ -39,7 +39,7 @@ Este proyecto es una aplicación web para gestionar reservas y mostrar las insta
     ```bash
     npm run dev
 
-# USO
+# Uso
 
 Una vez que el servidor esté en funcionamiento, abre tu navegador y accede a http://localhost:3000 para ver la aplicación en acción.
 
