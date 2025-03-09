@@ -1,13 +1,10 @@
 "use client"
 
-import React, { useState } from "react"
+import React from "react"
 import Link from "next/link"
 import { motion } from "framer-motion"
-import { MapPin, Phone, Clock, PhoneIcon as WhatsApp, Send } from "lucide-react"
+import { MapPin, Phone, Clock, PhoneIcon as WhatsApp } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Textarea } from "@/components/ui/textarea"
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -30,30 +27,6 @@ const itemVariants = {
 }
 
 export function ContactSection() {
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-  })
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({ ...prev, [name]: value }))
-  }
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    // Simula el envío
-    await new Promise((resolve) => setTimeout(resolve, 1500))
-    console.log("Mensaje enviado:", formData)
-
-    setFormData({ name: "", email: "", phone: "", message: "" })
-    setIsSubmitting(false)
-  }
-
   return (
     <section id="contacto" className="py-16 md:py-24 bg-gradient-to-b from-background to-muted/30">
       <div className="container px-4 md:px-6">
@@ -102,7 +75,7 @@ export function ContactSection() {
             />
           </motion.div>
 
-          {/* Columna Derecha: Info de contacto y formulario */}
+          {/* Columna Derecha: Información de Contacto */}
           <motion.div
             className="flex flex-col gap-8 w-full"
             initial="hidden"
@@ -110,7 +83,6 @@ export function ContactSection() {
             viewport={{ once: true }}
             variants={containerVariants}
           >
-            {/* Tarjeta de Información de Contacto */}
             <motion.div
               className="bg-background rounded-xl p-6 shadow-lg border border-border/50"
               variants={itemVariants}
@@ -152,98 +124,6 @@ export function ContactSection() {
                   </Link>
                 </Button>
               </div>
-            </motion.div>
-
-            {/* Tarjeta del Formulario */}
-            <motion.div
-              className="bg-background rounded-xl p-6 shadow-lg border border-border/50"
-              variants={itemVariants}
-            >
-              <h3 className="text-xl font-semibold mb-6">Envíanos un Mensaje</h3>
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div>
-                  <Label htmlFor="name">Nombre</Label>
-                  <Input
-                    id="name"
-                    name="name"
-                    placeholder="Tu nombre"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="mt-1.5"
-                  />
-                </div>
-                <div>
-                  <Label htmlFor="email">Email</Label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    placeholder="tu@email.com"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="mt-1.5"
-                  />
-                </div>
-                <div>
-                  <Label htmlFor="phone">Teléfono</Label>
-                  <Input
-                    id="phone"
-                    name="phone"
-                    placeholder="Tu número de teléfono"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    required
-                    className="mt-1.5"
-                  />
-                </div>
-                <div>
-                  <Label htmlFor="message">Mensaje</Label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    placeholder="¿En qué podemos ayudarte?"
-                    value={formData.message}
-                    onChange={handleChange}
-                    rows={4}
-                    required
-                    className="mt-1.5"
-                  />
-                </div>
-                <Button type="submit" className="w-full" disabled={isSubmitting}>
-                  {isSubmitting ? (
-                    <span className="flex items-center gap-2">
-                      <svg
-                        className="animate-spin -ml-1 mr-2 h-4 w-4 text-white"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                      >
-                        <circle
-                          className="opacity-25"
-                          cx="12"
-                          cy="12"
-                          r="10"
-                          stroke="currentColor"
-                          strokeWidth="4"
-                        ></circle>
-                        <path
-                          className="opacity-75"
-                          fill="currentColor"
-                          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                        ></path>
-                      </svg>
-                      Enviando...
-                    </span>
-                  ) : (
-                    <span className="flex items-center gap-2">
-                      <Send className="h-4 w-4" />
-                      Enviar Mensaje
-                    </span>
-                  )}
-                </Button>
-              </form>
             </motion.div>
           </motion.div>
         </div>
