@@ -75,7 +75,7 @@ export function HeroCarousel() {
           <div className="flex justify-center gap-4 pt-4 animate-fade-up animation-delay-200">
           <Button asChild size="lg" className="rounded-full">
             <a
-              href="https://wa.me/5492644721518"
+              href="https://wa.me/5492645060201"
               target="_blank"
               rel="noopener noreferrer"
             >
