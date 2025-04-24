@@ -21,15 +21,15 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Arrival Fiorito - Tu escape perfecto en San Juan",
     description:
-      "Alojamiento con todas las comodidades en un entorno natural privilegiado. Disfruta de la tranquilidad y la naturaleza.",
-    url: "https://www.arrivalfiorito.com",
+      "Alojamiento con todas las comodidades en un entorno natural privilegiado. Disfrutá de la tranquilidad y la naturaleza.",
+    url: "https://arrivalfiorito.netlify.app",
     siteName: "Arrival Fiorito",
     images: [
       {
-        url: "https://www.arrivalfiorito.com/og-image.jpg",
+        url: "https://arrivalfiorito.netlify.app/pileta.jpg",
         width: 1200,
         height: 630,
-        alt: "Arrival Fiorito - Alojamiento en San Juan",
+        alt: "Arrival Fiorito - Pileta y naturaleza",
       },
     ],
     locale: "es_AR",
@@ -39,8 +39,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Arrival Fiorito - Tu escape perfecto en San Juan",
     description:
-      "Alojamiento con todas las comodidades en un entorno natural privilegiado. Disfruta de la tranquilidad y la naturaleza.",
-    images: ["https://www.arrivalfiorito.com/twitter-image.jpg"],
+      "Alojamiento con todas las comodidades en un entorno natural privilegiado. Disfrutá de la tranquilidad y la naturaleza.",
+    images: ["https://arrivalfiorito.netlify.app/pileta.jpg"],
     creator: "@ArrivalFiorito",
   },
   robots: {
@@ -55,9 +55,9 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://www.arrivalfiorito.com",
+    canonical: "https://arrivalfiorito.netlify.app",
   },
-    generator: 'v0.dev'
+  generator: "v0.dev",
 }
 
 export default function RootLayout({
@@ -67,11 +67,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
+      <head>
+        {/* Favicon SVG */}
+        <link rel="icon" type="image/svg+xml" href="/house-svgrepo-com.svg" />
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   )
 }
-
-
-
-import './globals.css'
