@@ -6,7 +6,7 @@ export function StructuredData() {
     description:
       "Arrival Fiorito te ofrece un espacio único para disfrutar en familia o con amigos, rodeado de naturaleza y a solo 10 minutos de la Capital Sanjuanina.",
     url: "https://www.arrivalfiorito.com",
-    telephone: "+5492644721518",
+    telephone: "+5492645060201",
     address: {
       "@type": "PostalAddress",
       streetAddress: "Calle Proyectada - Lote 4 - Colonia Fiorito",
