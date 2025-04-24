@@ -46,7 +46,7 @@ export default function Home() {
             </nav>
             <Button asChild className="hidden md:flex">
               <a
-                href="https://wa.me/5492644721518"
+                href="https://wa.me/5492645060201"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -185,7 +185,7 @@ export default function Home() {
                   <p>Calle Proyectada - Lote 4</p>
                   <p>Colonia Fiorito - 9 de Julio</p>
                   <p>San Juan, Argentina</p>
-                  <p className="pt-2">WhatsApp: +54 9 2644 72-1518</p>
+                  <p className="pt-2">WhatsApp: +54 9 264 506 0201</p>
                 </address>
               </div>
             </div>
