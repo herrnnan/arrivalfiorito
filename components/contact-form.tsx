@@ -95,7 +95,7 @@ export function ContactSection() {
                 <Phone className="h-5 w-5 text-primary flex-shrink-0 mt-1" />
                 <div>
                   <p className="font-medium">Teléfono</p>
-                  <p className="text-muted-foreground">WhatsApp: +54 9 2644 72-1518</p>
+                  <p className="text-muted-foreground">WhatsApp: +54 9 264 506 0201</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
@@ -107,7 +107,7 @@ export function ContactSection() {
               </div>
               <Button asChild className="w-full mt-4 bg-green-500 hover:bg-green-600">
                 <Link
-                  href="https://wa.me/c/5492644721518"
+                  href="https://wa.me/c/5492645060201"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2"
