@@ -114,7 +114,7 @@ export function ContactSection() {
                 </div>
                 <Button asChild className="w-full mt-4 bg-green-500 hover:bg-green-600">
                   <Link
-                    href="https://wa.me/c/5492645060201"
+                    href="https://wa.me/5492645060201"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center justify-center gap-2"
